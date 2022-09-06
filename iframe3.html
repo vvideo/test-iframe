@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iframe3</title>
+  <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Iframe3</h1>
+    <div id="focus"></div>
+    <div id="keys"></div>
+    <input type="text" />
+
+    <script>
+        document.addEventListener('keydown', function(e) {
+            var keys = document.querySelector('#keys')
+            keys.innerHTML = 'keyCode: ' + e.keyCode + ', key: ' + e.key;            
+        });
+        
+        window.setInterval(function() {
+            var focus = document.querySelector('#focus')
+            focus.innerHTML = document.activeElement ? document.activeElement.tagName : document.activeElement;
+        }, 500);
+    </script>
+</body>
+</html>
